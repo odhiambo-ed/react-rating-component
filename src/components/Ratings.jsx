@@ -1,8 +1,11 @@
 import { BsFillStarFill } from "react-icons/bs";
 import './Ratings.css'
+import { useState } from "react";
 
 function Ratings() {
-   
+    const [rating, setRating] = useState(0)
+    const [hover, setHover] = useState(0)
+
     const handleClick = (index) => {
         console.log(index)
     }
@@ -17,6 +20,7 @@ function Ratings() {
                         key={index}
                         className="inactive"
                         onClick={() => handleClick(index)}
+                        onMouseEnter={() => handleMouse(index)}
                       />
                     </>
                   );
