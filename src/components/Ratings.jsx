@@ -11,7 +11,7 @@ function Ratings() {
     }
 
     const handleMouseMove = (index) => {
-        console.log(index)
+        setHover(index + 1)
     }
 
     const handleMouseLeave = () => {
