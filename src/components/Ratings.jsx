@@ -32,6 +32,8 @@ function Ratings() {
                         onClick={() => handleClick(index)}
                         onMouseMove={() => handleMouseMove(index)}
                         onMouseLeave={handleMouseLeave}
+                        style={{ cursor: "pointer" }}
+                        size={40}
                       />
                     </>
                   );
