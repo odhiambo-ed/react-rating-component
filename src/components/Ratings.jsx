@@ -7,11 +7,11 @@ function Ratings() {
     const [hover, setHover] = useState(0)
 
     const handleClick = (index) => {
-        setRating(index + 1)
+        setRating(index)
     }
 
     const handleMouseMove = (index) => {
-        setHover(index + 1)
+        setHover(index)
     }
 
     const handleMouseLeave = () => {
@@ -26,11 +26,12 @@ function Ratings() {
                     <>
                       <BsFillStarFill
                         key={index}
-                        starPosition={index + 1}
-                        className="inactive"
-                        onClick={ handleClick }
-                        onMouseMove={ handleMouseMove }
-                        onMouseLeave={ handleMouseLeave }
+                        className={
+                          index <= (hover || rating) ? "active" : "inactive"
+                        }
+                        onClick={() => handleClick(index)}
+                        onMouseMove={() => handleMouseMove(index)}
+                        onMouseLeave={handleMouseLeave}
                       />
                     </>
                   );
