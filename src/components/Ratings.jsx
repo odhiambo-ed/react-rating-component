@@ -3,7 +3,7 @@ import './Ratings.css'
 import { useState } from "react";
 
 function Ratings() {
-    const [rating, setRating] = useState(0)
+    const [rating, setRating] = useState(-1)
     const [hover, setHover] = useState(0)
 
     const handleClick = (index) => {
