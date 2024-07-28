@@ -20,24 +20,24 @@ function Ratings() {
   return (
     <div className="container-fluid vw-100 vh-100 holder d-flex justify-content-center align-items-center">
       <div className="border border-success rounded-pill py-2 px-5">
-        <h5>Ratings</h5>
-              {Array.from({ length: 10 }).map((_, index) => {
-                  return (
-                    <>
-                      <BsFillStarFill
-                        key={index}
-                        className={
-                          index <= (hover || rating) ? "active" : "inactive"
-                        }
-                        onClick={() => handleClick(index)}
-                        onMouseMove={() => handleMouseMove(index)}
-                        onMouseLeave={handleMouseLeave}
-                        style={{ cursor: "pointer" }}
-                        size={40}
-                      />
-                    </>
-                  );
-              })}
+        <div className="py-5 px-5">
+          <h5 className="text-center text-success text-uppercase">Rating</h5>
+          {Array.from({ length: 10 }).map((_, index) => {
+            return (
+              <>
+                <BsFillStarFill
+                  key={index}
+                  className={index <= (hover || rating) ? "active" : "inactive"}
+                  onClick={() => handleClick(index)}
+                  onMouseMove={() => handleMouseMove(index)}
+                  onMouseLeave={handleMouseLeave}
+                  style={{ cursor: "pointer" }}
+                  size={40}
+                />
+              </>
+            );
+          })}
+        </div>
       </div>
     </div>
   );
