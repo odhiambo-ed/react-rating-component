@@ -1,7 +1,8 @@
-import { BsStar } from "react-icons/bs";
+import { BsFillStarFill } from "react-icons/bs";
 import './Ratings.css'
 
 function Ratings() {
+   
     const handleClick = (index) => {
         console.log(index)
     }
@@ -12,11 +13,11 @@ function Ratings() {
               {Array.from({ length: 10 }).map((_, index) => {
                   return (
                     <>
-                          <BsStar
-                              key={index}
-                              className="star"
-                              onClick={() => handleClick(index)}
-                          />
+                      <BsFillStarFill
+                        key={index}
+                        className="inactive"
+                        onClick={() => handleClick(index)}
+                      />
                     </>
                   );
               })}
