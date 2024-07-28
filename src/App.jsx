@@ -1,9 +1,10 @@
 import './App.css'
+import Ratings from './components/Ratings'
 
 function App() {
   return (
     <>
-      <h1>Jesus in You I trust</h1>
+      <Ratings />
     </>
   )
 }
