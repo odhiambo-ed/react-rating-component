@@ -15,7 +15,7 @@ function Ratings() {
     }
 
     const handleMouseLeave = () => {
-
+        setHover(0)
     }
   return (
     <div className="container-fluid vw-100 vh-100 bg-light d-flex justify-content-center align-items-center">
