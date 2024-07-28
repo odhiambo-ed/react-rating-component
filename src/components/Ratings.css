@@ -1,3 +1,7 @@
-.star {
-    
+.active {
+    color: gold;
+}
+
+.inactive {
+    color: gray;
 }
